@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fibonacci Web App</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f4f4;
+            padding: 50px;
+        }
+        .box {
+            background: white;
+            padding: 20px;
+            width: 400px;
+            margin: auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px gray;
+        }
+        input, button {
+            padding: 8px;
+            margin-top: 10px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>Fibonacci Series Generator</h2>
+        <form method="post">
+            <label>Enter number of terms:</label>
+            <input type="number" name="number" required>
+            <button type="submit">Generate</button>
+        </form>
+
+        {% if result %}
+            <h3>Result:</h3>
+            <p>{{ result }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
